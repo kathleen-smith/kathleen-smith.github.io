@@ -1,0 +1,19 @@
+/* ---- Replace "fontname" with the font name you want to import ---- */
+@font-face {
+    font-family: 'LieToMe';
+    src: url('../../fonts/LieToMe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'LieToMe';
+//     src: url('../../fonts/asap/fontname.eot');
+//     src: url('../../fonts/asap/fontname.eot?#iefix') format('embedded-opentype'),
+//          url('../../fonts/asap/fontname.woff2') format('woff2'),
+//          url('../../fonts/asap/fontname.woff') format('woff'),
+//          url('../../fonts/LieToMe.ttf') format('truetype'),
+//          url('../../fonts/asap/fontname.svg#fontname') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }

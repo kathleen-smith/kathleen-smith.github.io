@@ -1,60 +1,272 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Kathleen Smith / Front End Developer</title>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="stylesheet" type="text/css" href="styles/css/main.min.css">
-        <link rel="stylesheet" type="text/css" href="styles/css/landing-page.css">
-        <script src="https://use.fontawesome.com/c7f339238a.js"></script>
-        <script src="scripts/jquery_3_2_1.min.js"></script>
-        <script src="scripts/custom.js"></script>
-    </head>
-    <body>
-        <div class="main-container" style="position:absolute;">
-        
-            <!-- Start Dark Bar -->
-            <div class="darkturqoise fixed">
-                <div class="inner-container">
-                    <h1><a href="#">Kathleen Smith</a></h1>
-                    <div class="nav">
-                        <ul>
-                            <li>Front End Developer / Email Developer</li>
-                        </ul>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/custom.js"></script>
+    <title>Kathleen Smith | Front End Developer</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-outer">
+        <div class="container-inner">
+            <div class="illustration-container">
+              <img src="images/outline-me.png" alt="Kathleen Smith" />
             </div>
-            <!-- End Dark Bar -->
-       
-            <div class="inner-container">
-                <h2>
-                    Hello!
-                </h2>
-                <div class="img">
-                    <p>
-                        I'm Kathleen & I'm a Front End Developer, based in Wakefield, West Yorkshire. I graduated from the University of Huddersfield in 2012 with a BSc (Hons) in Web Technologies. I currently have 5 years' experience in the web industry and my passion lies in building creative, fresh-looking websites and email marketing campaigns.
-                    </p>
-                    <p>
-                        My portfolio is currently undergoing some work and will be back online soon!
-                    </p>
-                </div>
-                <div class="contact">
-                <div id="thank_you">
-                    <div class="social">
-                        <a href="http://kathleen-smith.co.uk/CV.pdf"><i class="fa fa-file" aria-hidden="true"></i> Download CV</a>
-                        <a href="mailto:kathleenmrasmith@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email me</a>
-                        <a href="https://www.linkedin.com/in/kathleenmrasmith/"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Connect with me on LinkedIn</a>
-                        <a href="https://twitter.com/kathleenmarie3"><i class="fa fa-twitter-square" aria-hidden="true"></i> Follow me on Twitter</a>
-                    </div>
-                </div>
-                
-                </div>
+            <div class="header-text-container">
+              <h1>Kathleen Smith</h1>
+              <h2>Front End & Email Developer</h2>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
-        <script src="scripts/contactform.js"></script>
-    </body>
+      </div>
+    </header>
+
+    <nav>
+      <div class="container-outer portfolio-container">
+        <div class="container-inner">
+          <ul>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="Kathleen_Smith_CV_2020.pdf" target="_blank">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-outer">
+      <div class="container-inner">
+        <h2 id="portfolio">Portfolio</h2>
+        <div id="tabs">
+          <ul class="tab-navigation">
+            <li><a href="#websites">Websites</a></li>
+            <li><a href="#emails">Emails</a></li>
+          </ul>
+          <div id="websites" class="portfolio-section">
+            <ul>
+              <li><a href="https://creativerace.co.uk/" target="_blank"><img src="images/creativerace-tile.jpg" alt="CreativeRace" /></a></li>
+              <li><a href="https://digitalrace.agency/" target="_blank"><img src="images/digitalrace-tile.jpg" alt="DigitalRace" /></a></li>
+              <li><a href="https://boutinot.com/" target="_blank"><img src="images/boutinot-tile.jpg" alt="Boutinot Wines" /></a></li>
+              <li><a href="https://www.cycle2work.info/" target="_blank"><img src="images/cycle2work-tile.jpg" alt="Halfords Cycle2Work" /></a></li>
+              <li><a href="https://beyondhousing.co.uk/" target="_blank"><img src="images/beyond-tile.jpg" alt="Beyond Housing" /></a></li>
+              <li><a href="https://xalient.com/" target="_blank"><img src="images/xalient-tile.jpg" alt="Xalient" /></a></li>
+              <li><a href="https://www.cmd-ltd.com/" target="_blank"><img src="images/cmd-tile.jpg" alt="CMD" /></a></li>
+              <li><a href="https://property-lab.com/" target="_blank"><img src="images/propertylab-tile.jpg" alt="PropertyLab" /></a></li>
+            </ul>
+          </div>
+          <div id="emails" class="portfolio-section">
+            <p class="section-intro">
+              I have lots of email examples, but I have listed a few below. You can download code examples from my <a href="https://gitlab.com/Emails" target="_blank">Gitlab</a>!
+            </p>
+            <ul>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/eukanuba-1.jpg" alt="Eukanuba" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/eukanuba-1.png" alt="Eukanuba" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/eukanuba-2.jpg" alt="Eukanuba" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/eukanuba-2.png" alt="Eukanuba" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/tesco-1.jpg" alt="Tesco F&F" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/tesco-1.png" alt="Tesco F&F" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/tesco-2.jpg" alt="Tesco F&F" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/tesco-2.png" alt="Tesco F&F" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/asda.jpg" alt="Asda for business" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/asda.png" alt="Asda for business" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/keepmoat-1.jpg" alt="Keepmoat Homes" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/keepmoat-1.png" alt="Keepmoat Homes" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/keepmoat-2.jpg" alt="Keepmoat Homes" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/keepmoat-2.png" alt="Keepmoat Homes" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/npower.jpg" alt="nPower" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/npower.png" alt="nPower" />
+                  </div>
+                </div>
+              </li>
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/nfu-mutual.jpg" alt="NFU Mutual" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/nfu-mutual.png" alt="NFU Mutual" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/biffa.jpg" alt="Biffa" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/biffa.png" alt="Biffa" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/coleg-gwent.jpg" alt="Coleg Gwent" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/coleg-gwent.png" alt="Coleg Gwent" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/worldpay.jpg" alt="Worldpay" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/worldpay.png" alt="Worldpay" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/puregym.jpg" alt="PureGym" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/puregym.png" alt="PureGym" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/staff.jpg" alt="Staffordshire University" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/staff.png" alt="Staffordshire University" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/allott.jpg" alt="Allott and Associates" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/allott.png" alt="Allott and Associates" />
+                  </div>
+                </div>
+              </li> 
+              <li class="email-example">
+                <span class="close-modal"><img src="images/close.png" /></span>
+                <a href="#" target="_blank"><img src="images/phs.jpg" alt="PHS" /></a>
+                <div class="email-overlay">
+                  <div class="overlay-background"></div>
+                  <div class="overlay-inner">
+                    <img src="images/email-full/phs.png" alt="PHS" />
+                  </div>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- only for mobile -->
+    <div class="container-outer mobile-only">
+      <div class="container-inner">
+        <img src="images/outline-me.png" alt="Kathleen Smith" />
+      </div>
+    </div>
+    <!-- // only for mobile -->
+
+    <div class="container-outer about-section">
+      <div class="container-inner">
+        <h2 id="about">About</h2>
+        <p>I'm a Front End Developer, based in Wakefield, West Yorkshire. I graduated from the University of Huddersfield in 2012 with a BSc (Hons) in Web Technologies. I currently have over 8 years’ experience in the web industry and my passion lies in building creative, user-friendly websites and email marketing campaigns. I’ve worked with some very well-known brands and have produced websites, landing pages, HTML5 Banner ads and emails for clients such as Asda, WorldPay, JML, Hermes, Halfords, Greggs, Virgin Active, Pets at Home, Iams, Vitality and nPower. My strengths lie in email marketing and I’m proud of the fact that I can build emails that display great across all of the major email platforms and devices.</p>
+
+        <p>I'm hard-working and passionate about what I do and I always put in maximum effort to ensure that the work that I produce is the best it can be. I’m not afraid of a challenge and like stuck in with a project. I believe that I’m easy-going and good to get along with.</p>
+
+        <p>In my spare time, I like to spend time with my Husband, our 2 children and our Border Terrier, Holly. I like to draw, create <a href="illustrations.html">outlined illustrations</a> listen to a mixture of music, watch Horror movies, and finally, I love to bake!</p>
+      </div>
+    </div>
+
+    <div class="container-outer contact-section">
+      <div class="container-inner">
+        <h2 id="contact">Contact</h2>
+        <div class="contact-container">
+          <ul>
+            <li class="phone"><img src="images/phone-icon.jpg" /><a href="tel:07447022802">07447022802</a></li>
+            <li class="email"><img src="images/email-icon.jpg" /><a href="mailto:kathleenmrasmith@gmail.com">kathleenmrasmith@gmail.com</a></li>
+            <li class="linkedin"><img src="images/linkedin-icon.jpg" /><a href="https://www.linkedin.com/in/kathleenmrasmith/" target="_blank">/kathleenmrasmith</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-outer">
+        <div class="container-inner">
+          <p>Copyright &copy; 2020 - Kathleen Smith</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,588 @@
+@import "reset.css";
+
+/* ---- General ----*/
+html, body {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Fonts ---- */
+@font-face {
+    font-family: 'BasterMonkey';
+    src: url('../fonts/bastermonky-webfont.woff2') format('woff2'),
+         url('../fonts/bastermonky-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+  font-family: 'BasterMonkey', Arial, Helvetiva, sans-serif;
+  font-size: 200px;
+  color: #ff8480;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+  color: #333333;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ---- Containers ----*/
+.container-outer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container-inner {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 35px 0;
+  overflow: hidden;
+}
+
+/* ---- Header ----*/
+header {
+  padding: 10px 0 0 0;
+  overflow: hidden;
+  border-bottom: 3px solid #ff8480;
+}
+
+header .container-inner {
+  padding: 0;
+}
+
+.illustration-container {
+  width: 30%;
+  float: left;
+}
+
+.header-text-container {
+  float: right;
+  width: 67%;
+  padding-top: 5%;
+}
+
+/* ---- Navigation ---- */
+nav {
+  padding: 10px 0;
+  background: #ff8480;
+  text-align: center;
+}
+
+nav .container-inner {
+  padding: 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+nav ul li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #333333;
+}
+
+/* ---- Portfolio ---- */
+.portfolio-section ul li {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  -webkit-transition: margin .3s linear;
+  -moz-transition:    margin .3s linear, box-shadow .3s linear;
+  -o-transition:      margin .3s linear, box-shadow .3s linear;
+  -ms-transition:     margin .3s linear, box-shadow .3s linear;
+  transition:         margin .3s linear, box-shadow .3s linear;
+}
+
+.portfolio-section ul li a {
+  border: 1px solid #ff8480;
+  display: block;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.portfolio-section ul li a img {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.portfolio-section ul li:hover {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-section ul li:hover a {
+  -webkit-box-shadow: 10px 10px 19px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 19px -8px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 19px -8px rgba(0,0,0,0.75);
+}
+
+.tab-navigation {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.tab-navigation li {
+  float: left;
+  margin-right: 15px;
+}
+
+.tab-navigation li a:focus {
+  outline: none;
+}
+
+.tab-navigation li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.tab-navigation li.ui-state-active a {
+    color: #ff8480;
+}
+
+.tab-navigation li a:hover {
+  color: #ff8480;
+}
+
+.section-intro {
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 20px!important;
+  display: block;
+  border-top: 1px solid #ff8480;
+  padding-top: 10px;
+}
+
+.section-intro a {
+  color: #ff8480;
+  font-weight: bold;
+}
+
+.section-intro a:hover {
+  color: #333333;
+}
+
+.email-example .close-modal {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999999999;
+  width: 40px;
+}
+
+.email-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.email-example.active .email-overlay, .email-example.active .close-modal {
+  display: block!important;
+}
+
+.email-example.active.closed .email-overlay {
+  display: none!important
+}
+
+.email-overlay .overlay-background {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  opacity: 0.8;
+  height: 100%;
+  z-index: 10;
+}
+
+.email-overlay .overlay-inner {
+  z-index: 9999;
+    position: absolute;
+    top: le;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.email-overlay .overlay-inner img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.email-overlay .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+}
+
+
+/* ---- About ---- */
+.about-section {
+  background: #ff8480;
+}
+
+.about-section p, .about-section h2 {
+  color: #ffffff;
+}
+
+.about-section a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-only img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mobile-only .container-inner {
+  padding: 0;
+}
+
+/* ---- Contact ---- */
+.contact-container ul li {
+  list-style-type: none;
+  float: left;
+  padding-right: 40px;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contact-container ul li img {
+  display: inline-block;
+  float: left;
+}
+
+.contact-container ul li a {
+  color: #ff8480;
+  text-decoration: none;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.contact-container ul li a:hover {
+  color: #333333
+}
+
+/* ---- Illustrations ---- */
+.illustrations ul li {
+  width: 33.333%;
+}
+
+.illustrations ul li img {
+  border: 1px solid #ff8480;
+    display: block;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/* ---- Footer ---- */
+footer {
+  background: #333333;
+  text-align: center;
+}
+
+footer .container-inner {
+  padding: 15px 0;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* ---- MEDIA QUERIES ---- */
+@media screen and (max-width: 1395px) {
+  header h2 {
+    margin-bottom: 0px;
+  }
+
+  .header-text-container {
+    padding-top: 2%;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  h1 {
+    font-size: 160px;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .contact-container ul li {
+    padding-right: 30px
+  }
+
+  .contact-container ul li:last-of-type {
+    padding-right: 0!important;
+  }
+
+  .contact-container ul li img {
+    width: 40px
+  }
+
+  .contact-container ul li a {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  header h2 {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .contact-container ul li {
+    padding-right: 25px
+  }
+
+  .contact-container ul li:last-of-type {
+    padding-right: 0!important;
+  }
+
+  .contact-container ul li img {
+    width: 40px
+  }
+
+  .contact-container ul li a {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .portfolio-section ul li {
+    padding: 10px;
+  }
+
+  .container-inner {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  h1 {
+    font-size: 140px;
+    margin-bottom: 5px;
+  }
+
+  .header-text-container {
+    padding-top: 3%;
+  }
+
+  header h2 {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header h2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  h1 {
+    font-size: 130px;
+    margin-bottom: 5px;
+  }
+
+  .header-text-container {
+    padding-top: 3%;
+  }
+
+  header h2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  h1 {
+    font-size: 110px;
+  }
+
+  .contact-container ul li {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .contact-container ul li a {
+      font-size: 15px;
+  }
+
+  .contact-container ul li:last-of-type {
+    margin-bottom: 0!important
+  }
+}
+
+@media screen and (max-width: 840px) {
+  h1 {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  .portfolio-section ul li {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  h1 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header h2 {
+    font-size: 14px;
+  }
+
+  .header-text-container {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  header h2 {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 75px;
+    margin-bottom: 2px;
+  }
+
+  .header-text-container {
+    padding-top: 0;
+  }
+
+  .portfolio-section ul li {
+    width: 50%;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    padding: 0!important
+  }
+
+  header .container-inner {
+    width: 100%;
+  }
+
+  .illustration-container {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .header-text-container {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header {
+    border-bottom-width: 2px;
+  }
+
+  header h2 {
+    font-size: 12px;
+  }
+
+  nav {
+    padding: 12px 0;
+    background: #ffffff;
+  }
+
+  nav a {
+    color: #333333;
+  }
+
+  nav a:hover {
+    color: #ff8480;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 155%;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .contact-container ul li img {
+    width: 30px;
+  }
+}
